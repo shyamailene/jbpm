@@ -1,4 +1,4 @@
-<div class="page-header" data-parallax="true" style="background-image: url('../assets/img/daniel-olahh.jpg');">
+<div class="page-header" data-parallax="true" style="background-image: url('./assets/img/daniel-olahh.jpg');">
     <div class="filter"></div>
     <div class="container">
         <div class="motto text-center">
@@ -83,7 +83,7 @@
             <div class="col-md-4">
                 <div class="card card-profile card-plain">
                     <div class="card-avatar">
-                        <a href="#avatar"><img src="../assets/img/faces/clem-onojeghuo-3.jpg" alt="..."></a>
+                        <a href="#avatar"><img src="./assets/img/faces/clem-onojeghuo-3.jpg" alt="..."></a>
                     </div>
                     <div class="card-block">
                         <a href="#paper-kit">
@@ -107,7 +107,7 @@
             <div class="col-md-4">
                 <div class="card card-profile card-plain">
                     <div class="card-avatar">
-                        <a href="#avatar"><img src="../assets/img/faces/joe-gardner-2.jpg" alt="..."></a>
+                        <a href="#avatar"><img src="./assets/img/faces/joe-gardner-2.jpg" alt="..."></a>
                     </div>
                     <div class="card-block">
                         <a href="#paper-kit">
@@ -131,7 +131,7 @@
             <div class="col-md-4">
                 <div class="card card-profile card-plain">
                     <div class="card-avatar">
-                        <a href="#avatar"><img src="../assets/img/faces/erik-lucatero-2.jpg" alt="..."></a>
+                        <a href="#avatar"><img src="./assets/img/faces/erik-lucatero-2.jpg" alt="..."></a>
                     </div>
                     <div class="card-block">
                         <a href="#paper-kit">
@@ -164,20 +164,20 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label>Name</label>
-                                <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="nc-icon nc-single-02"></i>
-                                    </span>
-                                    <input type="text" class="form-control" placeholder="Name">
+                                <div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text"><i class="nc-icon nc-single-02"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Name" (focus)="focus=true" (blur)="focus=false" >
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <label>Email</label>
-                                <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="nc-icon nc-email-85"></i>
-                                    </span>
-                                    <input type="text" class="form-control" placeholder="Email">
+                                <div class="input-group" [ngClass]="{'input-group-focus':focus1===true}">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text">  <i class="nc-icon nc-email-85"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Email" (focus)="focus1=true" (blur)="focus1=false" >
                                 </div>
                             </div>
                         </div>

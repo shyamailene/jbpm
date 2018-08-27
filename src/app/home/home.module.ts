@@ -8,8 +8,6 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
 
 import { ComponentsModule } from '../components/components.module';
-import { OurstoryModule } from '../ourstory/ourstory.module';
-import { ExecutiveModule } from '../executive/executive.module';
 
 @NgModule({
     imports: [
@@ -17,10 +15,7 @@ import { ExecutiveModule } from '../executive/executive.module';
         BrowserModule,
         FormsModule,
         RouterModule,
-		NgbModule,
-        ComponentsModule,
-		ExecutiveModule,
-		OurstoryModule
+        ComponentsModule
     ],
     declarations: [ HomeComponent ],
     exports:[ HomeComponent ],
