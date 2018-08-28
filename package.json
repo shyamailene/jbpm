@@ -1,21 +1,26 @@
 {
-  "name": "pk2-angular",
+  "name": "shaktiangular",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "node server.js",
-    "ng": "ng",
+    "heroku-prebuild": "npm install -g http-server",
+    "heroku-postbuild": "ng build --prod",
+    "start": "http-server dist/",    
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot -prod"
+	"heroku-prebuild": "npm install -g http-server",
+	"heroku-postbuild": "ng build --prod",
+	"start": "http-server dist/"
+  },
+  "engines": {
+    "node": "8.9.4",
+    "npm": "5.6.0"
   },
   "private": true,
   "dependencies": {
-	"@angular-devkit/build-optimizer": "^0.4.0",
     "@angular/cli": "1.4.1",
-    "@angular/compiler-cli": "4.3.1",	
     "@angular/animations": "4.3.1",
     "@angular/common": "4.3.1",
     "@angular/compiler": "4.3.1",
@@ -39,6 +44,7 @@
     "typescript": "2.3.3"
   },
   "devDependencies": {
+    "@angular/compiler-cli": "4.3.1",
     "@angular/language-service": "4.3.1",
     "@types/jasmine": "2.5.45",
     "@types/node": "~6.0.60",
@@ -55,9 +61,5 @@
     "ts-node": "~3.0.4",
     "tslint": "~5.3.2",
     "typescript": "2.3.3"
-  },
-  "engines": {
-    "node": "6.11.1",
-    "npm": "3.10.9"
   }
 }
